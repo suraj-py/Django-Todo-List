@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Todo List</title>
+    <link rel="stylesheet" href="{% static 'todo/style.css'%}">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Heading -->
+        <div class="heading">
+            <h1>TODO LIST</h1>
+        </div>
+
+        <!-- Task Adding Section -->
+        <div class="add_section">
+            <form action="{% url 'add' %}" method="POST">
+                {% csrf_token %}
+                <!-- <input type="text" name="" id="" placeholder="hell"> -->
+                {{ form.task }}
+                <span>
+                        <button type="submit" class="add-btn">ADD </button>
+                </span>
+            </form>
+        </div>
+
+        <!-- Task List -->
+        <div class="items-list">
+            <ul>
+                {% for todo in todo_list %}
+                    {% if todo.complete %}
+                        <li class="todo-completed complete">
+                            <label>{{ todo.task }}</label>
+                            <a href="{% url 'delete' %}">
+                                <input type="submit" value="DEL" class="del-btn">
+                            </a>
+                        </li>
+                    {% else %}
+                         <li>
+                            <label>{{ todo.task }}</label>
+                            <a href="{% url 'complete' todo.id %}">
+                                <input type="submit" value="DONE " class="del-btn">
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

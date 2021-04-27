@@ -1,0 +1,126 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button, input{
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+ul, li{
+    list-style: none;
+}
+
+body{
+    background-image: linear-gradient(to right, #C6FFDD, #FBD786, #f7797d);
+}
+
+.container{
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    padding: 20px;
+    background-color: #FFEFBA;
+    box-shadow: 17px 14px 43px 9px rgba(0,0,0,0.42);
+    -webkit-box-shadow: 17px 14px 43px 9px rgba(0,0,0,0.42);
+    -moz-box-shadow: 17px 14px 43px 9px rgba(0,0,0,0.42);
+}
+
+.heading{
+    text-align: center;
+    font-size: 30px;
+    color: #203A43;
+}
+
+/* Add Section  */
+.add_section{
+    margin-left: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+input[type=text]{
+    width: 80%;
+    height: 40px;
+    outline: hidden;
+}
+
+input[type=button]{
+    width: 45px;
+    height: 30px;
+    padding: 3px;
+    outline: hidden;
+}
+
+.add-btn{
+   background-color: #76b852;
+   width: 45px;
+   height: 30px;
+   color: white;
+   outline: none;
+}
+
+
+/* List items Section  */
+.items-list{
+    text-align: center;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+li {
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding: 20px 0;
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #f46b45, #eea849);
+}
+
+
+
+a > input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+li > label {
+    font-size: 18px;
+    line-height: 40px;
+    width: 237px;
+    padding: 0 0 0 10px;
+}
+
+
+.del-btn{
+    float: right;
+    margin-right: 20px;
+    margin-top: 5px;
+    background-color: #f85032;
+    color: white;
+    outline: none;
+}
+
+.todo-completed label{
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.complete{
+     background-image: linear-gradient(to right, #56ab2f, #a8e063);
+}
